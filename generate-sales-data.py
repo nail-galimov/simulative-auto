@@ -3,9 +3,13 @@ from datetime import datetime, timedelta
 import pandas as pd
 from random import randint
 import configparser
+import os
 
 config = configparser.ConfigParser()
-config.read('config.ini')
+
+dirname = os.path.dirname(__file__)
+config = configparser.ConfigParser()
+config.read(os.path.join(dirname, "config.ini"))
 
 COMPANIES = eval(config['Companies']['COMPANIES'])
 
