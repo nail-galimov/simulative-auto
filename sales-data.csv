@@ -1,0 +1,11 @@
+dt,company,transaction_type,amount
+2024-12-28,TSLA,buy,31
+2024-12-28,PFE,buy,852
+2024-12-28,F,buy,738
+2024-12-28,INTC,buy,864
+2024-12-28,BAC,buy,979
+2024-12-28,TSLA,sell,562
+2024-12-28,PFE,sell,193
+2024-12-28,F,sell,984
+2024-12-28,INTC,sell,539
+2024-12-28,BAC,sell,811
