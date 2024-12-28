@@ -12,13 +12,13 @@ COMPANIES = eval(config['Companies']['COMPANIES'])
 today = datetime.today()
 yesterday = today - timedelta(days=1)
 
-if 1 <= today.weekday() <= 5:
-    d = {
-        'dt': [yesterday.strftime('%d-%m-%Y')] * len(COMPANIES) * 2,
-        'company' : COMPANIES * 2,
-        'transaction_type' : ['buy'] * len(COMPANIES) + ['sell'] * len(COMPANIES),
-        'amount' : [randint(0, 1000) for _ in range(len(COMPANIES) * 2)]
-    }
-    df = pd.DataFrame(d)
-    df.to_csv('sales-data.csv', index=False)
+#if 1 <= today.weekday() <= 5:
+d = {
+    'dt': [yesterday.strftime('%Y-%m-%d')] * len(COMPANIES) * 2,
+    'company' : COMPANIES * 2,
+    'transaction_type' : ['buy'] * len(COMPANIES) + ['sell'] * len(COMPANIES),
+    'amount' : [randint(0, 1000) for _ in range(len(COMPANIES) * 2)]
+}
+df = pd.DataFrame(d)
+df.to_csv('sales-data.csv', index=False)
 
